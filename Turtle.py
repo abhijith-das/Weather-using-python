@@ -1,5 +1,5 @@
 from turtle import *
-color('green')
+color('blue')
 bgcolor('black')
 speed(11)
 #hideturtle()
