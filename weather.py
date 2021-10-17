@@ -4,7 +4,7 @@ from datetime import datetime
 
 api_key = '06a6427bffe64f25b2b133fd5842f332'
 location = input("Enter the city name: ")
-
+#api key initialisation
 complete_api_link = "https://api.openweathermap.org/data/2.5/weather?q=" + location + "&appid=" + api_key
 api_link = requests.get(complete_api_link)
 api_data = api_link.json()
@@ -16,6 +16,7 @@ hmdt = api_data['main']['humidity']
 wind_spd = api_data['wind']['speed']
 date_time = datetime.now().strftime("%d %b %Y | %I:%M:%S %p")
 
+#the print block
 print("-------------------------------------------------------------")
 print("-------------------------------------------------------------")
 print("Weather Stats for - {}  || {}".format(location.upper(), date_time))
